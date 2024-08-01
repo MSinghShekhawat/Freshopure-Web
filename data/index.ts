@@ -46,7 +46,6 @@ export const blogs = [
     description: "How technology is streamlining hotel supply chains",
     image: "1.jpg",
     dimensions: "sm:w-1/2",
-    onclick: "/page/blog",
   },
   {
     date: "10 September 2023",

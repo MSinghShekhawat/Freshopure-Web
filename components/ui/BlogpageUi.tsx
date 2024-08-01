@@ -4,7 +4,28 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "../MagicButton";
 import { TextGenerateEffect } from "./TextGenerateEffect";
 
-export const Blogpage = ({
+
+interface BlogpageProps {
+  title: string;
+  image: string;
+  description: string;
+  date: string;
+  title1: string;
+  image1: string;
+  description1: string;
+  date1: string;
+  title2: string;
+  image2: string;
+  description2: string;
+  date2: string;
+  title3: string;
+  image3: string;
+  description3: string;
+  date3: string;
+ 
+}
+
+export const Blogpage: React.FC<BlogpageProps> = ({
   title,
   image,
   description,

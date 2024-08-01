@@ -3,19 +3,21 @@
 
 import React from "react";
 
+interface PinContainerProps {
+  date: string;
+  title: string;
+  description: string;
+  image: string;
+  dimensions: string;
+}
 
-
-export const PinContainer = ({
+export const PinContainer: React.FC<PinContainerProps> = ({
   date,
   title,
   description,
   image,
   dimensions,
-  onclick,
 }) => {
-
-
-
   return (
     <div
       className={`${dimensions} relative group cursor-pointer overflow-hidden`}
@@ -34,11 +36,10 @@ export const PinContainer = ({
         <div className="absolute bottom-0 left-0 p-6 transform group-hover:-translate-y-4 transition duration-300 ease-in-out">
           <h2 className="text-xl font-semibold text-white">{title}</h2>
           <p className="text-base leading-4 text-white mt-2">{description}</p>
-          
-            <button className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-              <p className="pr-2 text-sm font-medium leading-none">Read More</p>
-            </button>
-          
+
+          <button className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+            <p className="pr-2 text-sm font-medium leading-none">Read More</p>
+          </button>
         </div>
       </div>
     </div>
